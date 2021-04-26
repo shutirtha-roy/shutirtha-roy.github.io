@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+/*******************MAIN START********************/
+.main{
+  background-color: #F8F5F1;
+  width: 100%;
+  height: 100vh;
+}
+
+.logo{
+  font-size: 25px;
+  font-weight: bold;
+  color: #151515;
+}
+
+.logo:hover{
+  transform: scale(1.1);
+}
+
+.main nav{
+  width: 100%;
+  background-color: #F7F3E9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 10px 40px;
+  -webkit-box-shadow: 0px 2px 5px -1px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 2px 5px -1px rgba(0,0,0,0.5);
+  box-shadow: 0px 2px 5px -1px rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.menu{
+  display: flex;
+}
+
+.menu li a{
+  margin: 0 10px;
+  padding: 10px 15px;
+  color: #798777;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+
+
+.active{
+  color: white !important;
+  background-color: #EB4D4B;
+}
+
+.menu li a:hover{
+  color: #fff;
+  background-color: #EB4D4B;
+  transition: 0.5s;
+}
+
+.quote-btn{
+  background-color: #151515;
+  padding: 10px 15px;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.quote-btn:hover{
+  background-color: #EB4D4B;
+  transition: 0.5s;
+}
+
+.hero-items{
+  width: 100%;
+  height: 100vh;
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-img{
+  width: 50%;
+  text-align: center;
+}
+
+.name{
+  width: 50%;
+  position: relative;
+  left: 10%;
+}
+
+.name p{
+  font-size: 20px;
+  color: #435560;
+}
+
+.name h1{
+  color: #292929;
+  font-size: 40px;
+  letter-spacing: 3px;
+}
+
+
+.lm-btn{
+  width: 200px;
+  height: 45px;
+  background-color: #292929;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.lm-btn:hover{
+  background-color: #EB4D4B;
+  transition: 0.5s;
+}
+
+.social{
+  /*position: absolute;*/
+  display: flex;
+}
+
+.social a{
+  padding: 15px 10px;
+}
+
+.social a:hover{
+
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+
+.social i{
+  color: #464f41;
+  font-size: 20px;
+}
+
+.social i:hover{
+  color: #EB4D4B;
+}
+/*******************MAIN END********************/
+
+/**************** START About Section ****************** */
+#about{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: #1B2021;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 20px 0 20px;
+}
+
+.about-img{
+  width: 50%;
+  text-align: center;
+}
+
+.about-img img, .hero-img img{
+    width: 200px;
+    height: 550px;
+}
+
+.about-text{
+  width: 50%;
+}
+
+.about-text h2{
+  font-size: 70px;
+  color: #EB4D4B;
+}
+
+.about-text h3{
+  font-size: 40px;
+  color: #fff;
+}
+
+.about-text p{
+  font-size: 26px;
+  color: #fff;
+  text-align: justify;
+}
+
+.about-text h2, h3{
+  margin: 0;
+  padding: 0;
+}
+
+.about-btn{
+  width: 200px;
+  height: 45px;
+  background-color: #EB4D4B;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.about-btn:hover{
+  background-color: #fff;
+  color: #000;
+  transition: 0.5s;
+}
+/**************** END About Section ****************** */
+
+
+/**************** Start Skills Section ****************** */
+
+#skills{
+  height: 100vh;
+  width: 100%;
+  background-color: #1391B7;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.skill-container{
+  width: 50%;
+  padding: 0 10%;
+}
+
+.skill-img{
+  width: 50%;
+
+}
+
+.skill-img img{
+  height: 500px;
+  width: 60%;
+  transform: translateX(100px);
+
+}
+
+.skill-heading h2{
+  color: #EB4D4B;
+  font-size: 70px;
+}
+
+.skill-heading h3{
+  color: white;
+  font-size: 30px;
+  margin: 0;
+}
+
+.skill-box{
+  display: flex;
+}
+
+.skill-icon{
+  margin: 25px 12px 0 0;
+}
+
+.skill-icon i{
+  font-size: 25px;
+  width: 40px;
+  height: 40px;
+  background-color: #FFF;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-html5{
+  color: #DD4B25;
+}
+
+.fa-css3-alt{
+  color: #254BDD;
+}
+
+.fa-js-square{
+  color: #F98231;
+}
+
+.skill-text h2{
+  color: #1b1a17;
+}
+
+.skill-text p{
+  color: #fff;
+  font-size: 16px;
+}
+/**************** End Skills Section ****************** */
+
+
+/**************** Start Service Section ****************** */
+#service{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #D8E3E7;
+}
+
+.service-heading{
+  text-align: center;
+}
+
+.service-heading h2{
+  color: #132c33;
+  font-size: 70px;
+  margin: 0;
+}
+
+.service-heading p{
+  color: #5B5B5b;
+  font-size: 20px;
+  margin: 0;
+}
+
+.service-container{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 20px;
+}
+
+.s-box{
+  background-color: #1E1E1E;
+  width: 350px;
+  height: 500px;
+  margin: 20px;
+  border-radius: 10px;
+  position: relative;
+  //overflow: hidden;
+  text-align: center;
+}
+
+.s-box:hover{
+  transform: translateY(-10px);
+  transition: 0.5s;
+}
+
+.sb-img img{
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.sb-heading{
+  width: 60%;
+  color: #fff;
+  background-color: #5B5B5B;
+  position: absolute;
+  text-align: center;
+  padding: 10px 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.sb-text{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.sb-text p{
+  color: #fff;
+  font-size: 18px;
+  max-width: 80%;
+
+  margin: 0 auto;
+}
+
+.sb-btn{
+  margin-top: 20px;
+  width: 180px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.sb-btn:hover{
+  background-color: #EB4D4B;
+  transition: 0.5s;
+}
+
+
+/**************** End Service Section ****************** */
+
+
+
+/**************** Start Portfolio Section ****************** */
+
+#portfolio{
+
+  width: 100%;
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 2% 20px 2%;
+  background-color: #E7E6E1;
+}
+
+.p-box{
+  width: 100%;
+  height: 350px;
+  background-color: red;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.p-box img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-heading{
+  color: #EB4D4B;
+  margin: 0;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.p-sub-heading{
+  color: #000;
+  font-size: 25px;
+  padding-bottom: 25px;
+}
+
+.p-container{
+  width: 90%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  height: 80vh;
+  grid-gap: 20px;
+}
+
+.overlay-text{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  flex-direction: column;
+  background-color: rgba(235, 77, 75, 0.6);
+}
+
+
+
+.overlay-text h1,
+.overlay-text p{
+  color: #fff;
+}
+
+.overlay-text h2{
+  margin: 0;
+  font-size: 18px;
+}
+
+.overlay-text p{
+  margin: 0;
+  font-size: 18px;
+}
+
+.p-box:hover .overlay-text{
+  display: flex;
+}
+
+/**************** End Portfolio Section ****************** */
+
+
+
+
+
+/**************** Start Contact Section ****************** */
+
+
+#contact{
+  width: 100%;
+  height: 93vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: lightblue;
+}
+
+.contact-heading{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contact-heading h2{
+  font-size: 50px;
+  color: #194350;
+  margin: 0;
+  padding-top: 20px;
+}
+
+.contact-btn{
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1b1717;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 250px;
+}
+
+.contact-btn:hover{
+  background-color: #1687a7;
+  transition: 0.25s;
+}
+
+.contact-box{
+  display: flex;
+  width: 80%;
+  height: 100%;
+}
+
+.cont-left{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  width: 50%;
+  height: 500px;
+  margin: 0;
+  padding: 0;
+  margin-top: 50px;
+}
+
+.address h3, .address .fas{
+  font-size: 30px;
+  margin: 0;
+  color: #194350;
+}
+
+.address p{
+  color: #126e82;
+  font-size: 20px;
+}
+
+.cont-right{
+  width: 50%;
+  height: 500px;
+  background-color: #194350;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.cont-right h2{
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+}
+
+.form-input{
+  height: 50px;
+  width: 400px;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  margin: 8px 0;
+  outline: none;
+}
+
+.form-textarea{
+  resize: vertical;
+  min-height: 100px;
+  border-radius: 10px;
+}
+
+.form-btn{
+  text-align: center;
+  width: 400px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: #1b1717;
+  cursor: pointer;
+  color: #fff;
+}
+
+.form-btn:hover{
+  background-color: #1687a7;
+  transition: 0.5s;
+}
+
+
+
+/**************** End Contact Section ****************** */
