@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #4a4a4a;
+  font-weight: bold;
+}
+
+nav ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+nav .right ul{
+  display: flex;
+}
+
+nav .right ul li , .left{
+  padding: 20px;
+}
+
+nav .right ul li{
+  border-right: 1px solid black;
+}
+
+nav .right ul li:hover{
+    opacity: 0.7;
+    transition: all 0.5s ease-in-out;
+}
+
+nav .right ul li:first-child a{
+  color: green;
+}
+
+nav .right ul li:first-child{
+  border-bottom: 5px solid green;
+}
