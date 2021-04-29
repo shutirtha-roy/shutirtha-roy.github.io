@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-image: url(../images/1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+
+/****************** HEADER *****************/
+div li{
+  border: 5px solid black;
+  border-width: medium;
+  font-size: 30px;
+  color: white;
+  list-style-type: none;
+  display: inline-block;
+  padding: 20px;
+}
+
+
+/****************SECTION*******************/
+section h1{
+  font-size:70px;
+  padding: 40px;
+  margin-left: 600px;
+  margin-top: 250px;
+  border-bottom: 4px solid white;
+  display: inline-block;
+  color: rgb(230, 230, 230);
+}
+
+section p{
+  color: rgb(204, 204, 204);
+  font-size:30px;
+  padding: 40px;
+  margin-left: 750px;
+  border-left: 4px dashed rgb(179, 179, 179);
+  border-right: 4px dashed rgb(179, 179, 179);
+  display: inline-block;
+  font-weight: bold;
+}
