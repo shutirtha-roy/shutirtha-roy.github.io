@@ -7,16 +7,21 @@ let stringAdder = "";
 
 
 
-const headerName = () => {
+const headerName = async () => {
     const headingValue = "I'm Shutirtha Roy";
 
-    /* for (let character of headingValue) {
+    for (let character of headingValue) {
         stringAdder += character;
-        //console.log(stringAdder);
-        setInterval(characterAdder, 1000);
-    } */
+        await sleep(100);
+        //setInterval(characterAdder, 1000);
+        firstChild.innerHTML = stringAdder;
+    } 
     firstChild.innerHTML = headingValue;
 
+}
+
+const sleep = (time) => {
+    return new Promise((resolve) => setTimeout(resolve, time))
 }
 
 const headerCapitalize = () => {
@@ -41,13 +46,24 @@ const headingAuthor = () => {
 };
 
 const QuoteCreator = () => {
-    setTimeout(headerCapitalize, 500);
-    setTimeout(headingQuote, 1000);
-    setTimeout(headingAuthor, 1500);
+    setTimeout(headerCapitalize, 2000);
+    setTimeout(headingQuote, 2500);
+    setTimeout(headingAuthor, 3000);
 };
 
-headerName();
-QuoteCreator();
+if (window.innerWidth > 960) {
+    headerName();
+    QuoteCreator();
+} else {
+    const headingValue = "I'm Shutirtha Roy";
+    firstChild.innerHTML = headingValue;
+    headerCapitalize();
+
+    headingQuote();
+    headingAuthor();
+}
+
+
 
 
 

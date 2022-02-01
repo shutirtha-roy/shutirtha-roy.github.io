@@ -115,7 +115,7 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 35vw;
+  height: 30vw;
 }
 
 @media only screen and (max-width: 2000px) {
@@ -207,4 +207,18 @@ nav a:hover {
   background-color: #000;
   color: #fff;
   height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+/* Footer Section */
+footer {
+  height: 30vh;
+  background-color: whitesmoke;
 }
