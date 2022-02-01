@@ -16,12 +16,11 @@ body {
 
 a {
   text-decoration: none;
-  opacity: 0.8;
 }
 
-li {
+/* li {
   list-style-type: none;
-}
+} */
 
 
 
@@ -41,10 +40,6 @@ header {
 
 
 
-
-
-
-
 /* Navigation Section */
 
 nav {
@@ -59,14 +54,16 @@ nav a {
   color: var(--link-color);
   font-weight: bold;
   font-size: 2.2vh;
+  opacity: 0.7;
 }
 
 nav a:hover {
-  color: #fff;
   text-decoration: underline;
   font-weight: bold;
+  opacity: 1;
   /* transition: 0.8s ease-in-out;*/
   transition-delay: 1s;
+  
 }
 
 .right-navigation {
@@ -128,21 +125,204 @@ nav a:hover {
 
 .text-section p {
   color: #fff;
-  font-size: 2vw;
+  font-size: 1.5vw;
   opacity: 0.7;
 }
 
 
+
+
+
+
+/* About Section */
+
 #about-me {
   background-color: #000;
+  
   color: #fff;
   height: 100vh;
 }
 
 
+.about-container {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+
+.about-container h1 {
+  padding: 6vh;
+  font-size: 5vh;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-content {
+  height: 72vh;
+  width: 50%;
+  background-color: rgb(255, 255, 255);
+  margin: 1vh;
+  text-align: center;
+}
+
+.left-content img {
+  height: 40vh;
+  margin-top: 5vh;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+
+.left-content img:hover {
+  opacity: 1;
+}
+
+
+.text-left-content {
+  margin-top: 3vh;
+  color: black;
+}
+
+.text-left-content p {
+  margin: 0 auto;
+  width: 80%;
+  word-spacing: 0.75vh;
+  font-size: 2.2vh;
+  font-weight: bold;
+}
+
+.right-content {
+  height: 72vh;
+  width: 50%;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  margin: 1vh;
+  font-size: 2.5vh;
+}
+
+
+.top-right-content {
+  padding: 3.5vh;
+}
+
+.top-right-content p, .bottom-right-content p{
+  padding: 0.7vh;
+}
+
+.bottom-right-content {
+  padding: 3.5vh;
+  padding-top: 0;
+  margin-left: 3vh;
+}
 
 
 
+.top-right-content h3, .bottom-right-content h3{
+  text-align: center;
+  font-style: italic;
+}
+
+
+@media only screen and (max-width: 900px) {
+  #about-me {
+    background-color: #000;
+    
+    color: #fff;
+    height: 200vh;
+  }
+
+
+  .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .left-content {
+    height: 72vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    margin: 1vh;
+    text-align: center;
+  }
+
+  .right-content {
+    height: 72vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    margin: 1vh;
+    text-align: center;
+  }
+}
+
+
+
+/* Skill */
+
+#skill {
+  background-image: url("../img/skill.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0 auto;
+  width: 100vw;
+  text-align: center;
+  height: 100vh;
+}
+
+table, th, td {
+  /* border: 3px solid rgb(148, 115, 115); */
+  border: 3px solid rgb(51, 44, 44);
+  border-collapse: collapse;
+}
+
+table {
+  background-color: rgb(0, 0, 0);
+  opacity: 0.7;
+}
+
+
+th, td {
+  padding: 0.85vh;
+  text-align: center;  
+  font-size: 3vh;  
+  font-weight: bold;
+  color: white;
+}
+
+table:hover {
+  opacity: 0.9;
+  background-color: rgb(10, 10, 10);
+}
+
+#skill .heading {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  /* background-color: #ffffff; */
+  color: white;
+}
+
+#skill h1 {
+  padding: 5vh;
+  font-size: 8vh;
+  font-style: italic;
+  font-weight: bold;
+  color: rgb(238, 223, 223);
+}
+
+.table-content {
+  height: 100vh;
+}
+
+.table-content table {
+  margin: 0 auto;
+}
 
 
 
