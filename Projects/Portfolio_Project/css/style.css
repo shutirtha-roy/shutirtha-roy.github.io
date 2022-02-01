@@ -34,6 +34,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  position: relative;
 }
 
 
@@ -115,7 +116,9 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 30vw;
+  position: absolute;
+  top: 10%;
+  left: 25%;
 }
 
 @media only screen and (max-width: 2000px) {
