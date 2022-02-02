@@ -180,23 +180,6 @@ nav a:hover {
   opacity: 1;
 }
 
-/* @media only screen and (max-width: 800px) {
-  .left-content img {
-    height: 30vh;
-    margin-top: 5vh;
-    border-radius: 50%;
-    opacity: 0.9;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .left-content img {
-    height: 30vh;
-    margin-top: 5vh;
-    border-radius: 50%;
-    opacity: 0.9;
-  }
-} */
 
 
 .text-left-content {
@@ -279,6 +262,47 @@ nav a:hover {
   }
 }
 
+@media only screen and (max-width: 800px) {
+  .left-content img {
+    height: 30vh;
+    margin-top: 5vh;
+    border-radius: 50%;
+    opacity: 0.9;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+  .about-container {
+    width: 100vw;
+    margin: 0 auto;
+  }
+
+  .about-content {
+    margin: 0 auto;
+  }
+
+
+  .left-content img {
+    height: 23vh;
+    margin-top: 5vh;
+    border-radius: 50%;
+    opacity: 0.9;
+  }
+
+  .text-left-content p {
+    word-spacing: 0.75vh;
+    font-size: 1.8vh;
+  }
+
+  .left-content {
+    width: 100%;
+  }
+
+  .right-content {
+    font-size: 1.8vh;
+  }
+}
 
 
 /* Skill */
@@ -342,8 +366,160 @@ table:hover {
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 1150px) {
+  th, td {
+    padding: 0.85vh;
+    text-align: center;  
+    font-size: 2.5vh;  
+    font-weight: bold;
+    color: white;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  th, td {
+    padding: 0.85vh;
+    font-size: 2vh;  
+  }
+}
+
 
 /* Interest */
+
+#interest {
+  background-image: url("../img/interest.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+
+#interest h1 {
+  color: rgb(221, 213, 213);
+  padding: 6vh;
+  font-size: 5vh;
+}
+
+.top-interest {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin: 3vh 0;
+}
+
+.top-interest > * {
+  height: 35vh;
+  background-color: turquoise;
+  width: 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+
+.top-interest .first-box {
+  background-image: url('../img/reading-books.jpg');
+}
+
+.top-interest .center-box {
+  background-image: url('../img/watching-movies.jpg');
+}
+
+.top-interest .last-box {
+  background-image: url('../img/coding.jpg');
+}
+
+
+.interest-content p{
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3vh;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+.bottom-interest {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin: 3vh 0;
+}
+
+.bottom-interest > * {
+  height: 35vh;
+  background-color: turquoise;
+  width: 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.bottom-interest .first-box {
+  background-image: url('../img/listening-to-music.jpg');
+}
+
+.bottom-interest .center-box {
+  background-image: url('../img/travelling.jpg');
+}
+
+.bottom-interest .last-box {
+  background-image: url('../img/playing-video-games.jpg');
+}
+
+
+@media only screen and (max-width: 900px) {
+  #interest {
+    height: 274vh;
+  }
+
+  .top-interest {
+    display: flex;
+    width: 90%;
+    
+    justify-content: space-around;
+    margin: 3vh auto;
+    /* height: 150vh; */
+    flex-wrap: wrap;
+  }
+
+
+  .top-interest > * {
+    width: 92vw;
+    margin: 3vh 0;
+  }
+
+  .bottom-interest {
+    display: flex;
+    width: 90%;
+    
+    justify-content: space-around;
+    margin: 3vh auto;
+    /* height: 150vh; */
+    flex-wrap: wrap;
+  }
+  
+  .bottom-interest > * {
+    width: 92vw;
+    margin: 3vh 0;
+  }
+
+}
+
+
 
 
 
@@ -356,6 +532,7 @@ table:hover {
 
 /* Footer Section */
 footer {
-  height: 30vh;
-  background-color: whitesmoke;
+  height: 15vh;
+  background-color: black;
+  color: white;
 }
