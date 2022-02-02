@@ -45,7 +45,7 @@ header {
 nav {
   display: flex;
   justify-content: space-between;
-  width: 90vw;
+  width: 90%;
   padding: 3vw;
   margin: 0 auto;
 }
@@ -226,8 +226,49 @@ nav a:hover {
   font-style: italic;
 }
 
+@media only screen and (max-width: 2150px) {
+  .text-left-content p {
+    word-spacing: 0.75vh;
+    font-size: 2vh;
+  }
 
-@media only screen and (max-width: 900px) {
+  .left-content {
+    height: 78vh;
+    width: 92vw;
+    background-color: rgb(255, 255, 255);
+    margin: 1vh;
+    text-align: center;
+  }
+
+  .right-content {
+    height: 78vh;
+    width: 92vw;
+    background-color: rgb(255, 255, 255);
+    margin: 1vh;
+    text-align: center;
+  }
+
+  .right-content {
+    font-size: 2vh;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .left-content img {
+    height: 28vh;
+    margin-top: 5vh;
+    border-radius: 50%;
+    opacity: 0.9;
+  }
+
+
+  .text-left-content p {
+    word-spacing: 0.75vh;
+    font-size: 1.7vh;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
   #about-me {
     background-color: #000;
     
@@ -235,7 +276,6 @@ nav a:hover {
     height: 200vh;
     
   }
-
 
   .about-content {
     display: flex;
@@ -271,7 +311,7 @@ nav a:hover {
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 550px) {
 
   .about-container {
     width: 100vw;
@@ -299,8 +339,8 @@ nav a:hover {
     width: 100%;
   }
 
-  .right-content {
-    font-size: 1.8vh;
+  .right-content .top-right-content{
+    font-size: 1.5vh;
   }
 }
 
@@ -531,8 +571,19 @@ table:hover {
 
 
 /* Footer Section */
-footer {
+#footer {
   height: 15vh;
   background-color: black;
   color: white;
+  position: relative;
+}
+
+#footer .footer-text-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8vh;
+  font-weight: lighter;
+  opacity: 0.7;
 }

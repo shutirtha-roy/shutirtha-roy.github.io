@@ -1,10 +1,8 @@
 const headingChildren = document.querySelector(".text-section").children
-
 const firstChild = Array.from(headingChildren)[0];
 const lastChild = Array.from(headingChildren).at(-1);
 const secondLastChild = Array.from(headingChildren).at(-2);
 let stringAdder = "";
-
 
 
 const headerName = async () => {
@@ -17,17 +15,19 @@ const headerName = async () => {
         firstChild.innerHTML = stringAdder;
     } 
     firstChild.innerHTML = headingValue;
-
 }
+
 
 const sleep = (time) => {
     return new Promise((resolve) => setTimeout(resolve, time))
 }
 
+
 const headerCapitalize = () => {
     firstChild.innerHTML = firstChild.innerHTML.italics();
     firstChild.style.color = "#6b6d4e";
 };
+
 
 const characterAdder = () => {
     firstChild.innerHTML = stringAdder;
@@ -41,15 +41,18 @@ const headingQuote = () => {
     
 };
 
+
 const headingAuthor = () => {
     lastChild.innerHTML = "-Walt Disney";
 };
+
 
 const QuoteCreator = () => {
     setTimeout(headerCapitalize, 2000);
     setTimeout(headingQuote, 2500);
     setTimeout(headingAuthor, 3000);
 };
+
 
 if (window.innerWidth > 960) {
     headerName();
@@ -65,8 +68,14 @@ if (window.innerWidth > 960) {
 
 
 
-
-
-
+const pageLocation = window.location.href;
 const date = new Date(document.lastModified);
-console.log(date);
+const footer = document.querySelector(".footer-text-content");
+console.log(footer);
+const pageLocationTag = footer.children[0];
+const dateTag = footer.children[1];
+
+pageLocationTag.innerHTML += pageLocation;
+dateTag.innerHTML += date;
+
+
