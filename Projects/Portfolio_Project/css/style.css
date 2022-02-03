@@ -55,13 +55,11 @@ nav a {
 }
 
 nav a:hover {
-  text-decoration: underline;
   font-weight: bold;
   opacity: 1;
-  /* transition: 0.8s ease-in-out;*/
-  transition-delay: 1s;
-  
+  transition: 0.6s ease-in-out;
 }
+
 
 .right-navigation {
   display: flex;
@@ -224,9 +222,8 @@ ul .first-link {
 
 .left-content img:hover {
   opacity: 1;
+  transition: 0.45s ease-in-out;
 }
-
-
 
 .text-left-content {
   margin-top: 3vh;
@@ -301,7 +298,7 @@ ul .first-link {
 
 @media only screen and (max-width: 1500px) {
   .left-content img {
-    height: 28vh;
+    height: 32vh;
     margin-top: 5vh;
     border-radius: 50%;
     opacity: 0.9;
@@ -314,7 +311,7 @@ ul .first-link {
   }
 
   .right-content .top-right-content, .bottom-right-content{
-    font-size: 2.2vh;
+    font-size: 3.0vh;
   }
 
   #about-me {
@@ -794,5 +791,54 @@ table:hover {
 @media only screen and (max-width: 1500px) {
   #footer .footer-text-content {
     font-size: 1.1vh;
+  }
+}
+
+
+@media only screen and (max-width: 1500px) {
+  #footer .footer-text-content {
+    font-size: 1.1vh;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  #footer .footer-text-content {
+    font-size: 0.8vh;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #footer .footer-text-content {
+    font-size: 0.6vh;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #footer .footer-text-content {
+    font-size: 0.5vh;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  #footer .footer-text-content {
+    font-size: 0.4vh;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #footer .footer-text-content {
+    font-size: 0.35vh;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  #footer .footer-text-content {
+    font-size: 0.3vh;
+    font-weight: bold;
   }
 }
