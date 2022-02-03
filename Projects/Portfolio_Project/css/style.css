@@ -69,6 +69,10 @@ nav a:hover {
   width: 40%;
 }
 
+ul .first-link {
+  visibility: visible;
+}
+
 
 @media only screen and (max-width: 1100px) {
   .right-navigation {
@@ -95,10 +99,24 @@ nav a:hover {
 }
 
 @media only screen and (max-width: 500px) {
+
+  nav {
+    width: 100%;
+    padding: 6vw;
+  }
+
+  .left-navigation {
+    width: 0%;
+  }
+
   .right-navigation {
     display: flex;
     justify-content: space-between;
-    width: 85%;
+    width: 100%;
+  }
+
+  ul .first-link {
+    visibility: hidden;
   }
 }
 
@@ -292,11 +310,52 @@ nav a:hover {
 
   .text-left-content p {
     word-spacing: 0.75vh;
-    font-size: 1.7vh;
+    font-size: 2.8vh;
   }
+
+  .right-content .top-right-content, .bottom-right-content{
+    font-size: 2.2vh;
+  }
+
+  #about-me {
+    height: 200vh;
+    
+  }
+
+  .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 92vw;
+  }
+
+  .left-content {
+    height: 85vh;
+    width: 92vw;
+    background-color: rgb(255, 255, 255);
+    margin: 1vh;
+    text-align: center;
+  }
+
+  .right-content {
+    height: 85vh;
+    width: 92vw;
+    background-color: rgb(255, 255, 255);
+    margin: 1vh;
+    text-align: center;
+  }
+
 }
 
 @media only screen and (max-width: 1000px) {
+
+  .text-left-content p {
+    word-spacing: 0.75vh;
+    font-size: 2.5vh;
+  }
+
+
   #about-me {
     background-color: #000;
     
@@ -337,6 +396,11 @@ nav a:hover {
     border-radius: 50%;
     opacity: 0.9;
   }
+
+  .text-left-content p {
+    word-spacing: 0.75vh;
+    font-size: 2.1vh;
+  }
 }
 
 @media only screen and (max-width: 550px) {
@@ -365,7 +429,7 @@ nav a:hover {
 
   .text-left-content p {
     word-spacing: 0.75vh;
-    font-size: 1.8vh;
+    font-size: 2vh;
   }
 
   .left-content {
@@ -379,6 +443,60 @@ nav a:hover {
   .right-content .top-right-content, .bottom-right-content{
     font-size: 1.5vh;
   }
+}
+
+@media only screen and (max-width: 450px) {
+
+  #about-me {
+    height: 135vh;
+  }
+
+  .left-content img {
+    height: 15vh;
+    margin-top: 4vh;
+    border-radius: 50%;
+    opacity: 0.9;
+  }
+
+  .text-left-content p {
+    word-spacing: 0.75vh;
+    font-size: 1.6vh;
+  }
+
+  .right-content .top-right-content, .bottom-right-content{
+    font-size: 1.2vh;
+    font-weight: bold;
+    letter-spacing: -0.1vh;
+  }
+
+  .top-right-content {
+    padding: 0vh;
+  }
+
+  .left-content {
+    height: 60vh;
+  }
+
+  .right-content {
+    height: 40vh;
+  }
+  
+}
+
+@media only screen and (max-width: 400px) {
+
+  #about-me {
+    height: 155vh;
+  }
+
+  .left-content {
+    height: 70vh;
+  }
+
+  .right-content {
+    height: 50vh;
+  }
+  
 }
 
 
@@ -396,7 +514,6 @@ nav a:hover {
 }
 
 table, th, td {
-  /* border: 3px solid rgb(148, 115, 115); */
   border: 3px solid rgb(51, 44, 44);
   border-collapse: collapse;
 }
@@ -453,10 +570,35 @@ table:hover {
   }
 }
 
+@media only screen and (max-width: 900px) {
+  th, td {
+    padding: 0.85vh;
+    font-size: 2.3vh;  
+  }
+}
+
 @media only screen and (max-width: 700px) {
   th, td {
     padding: 0.85vh;
     font-size: 2vh;  
+  }
+}
+
+@media only screen and (max-width: 400px) {
+
+
+  #skill h1 {
+    padding: 5vh;
+    font-size: 6vh;
+    font-style: italic;
+    font-weight: bold;
+    color: rgb(238, 223, 223);
+  }
+
+
+  th, td {
+    padding: 0.65vh;
+    font-size: 1.5vh;  
   }
 }
 
@@ -609,7 +751,13 @@ table:hover {
 }
 
 
-
+@media only screen and (max-width: 400px) {
+  #interest h1 {
+    color: rgb(221, 213, 213);
+    padding: 6vh;
+    font-size: 4vh;
+  }
+}
 
 
 
