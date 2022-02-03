@@ -75,7 +75,7 @@ console.log(footer);
 const pageLocationTag = footer.children[0];
 const dateTag = footer.children[1];
 
-pageLocationTag.innerHTML += pageLocation;
-dateTag.innerHTML += date;
+pageLocationTag.innerHTML += "<br>"+ pageLocation;
+dateTag.innerHTML += "<br>"+ date;
 
 

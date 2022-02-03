@@ -18,9 +18,6 @@ a {
   text-decoration: none;
 }
 
-/* li {
-  list-style-type: none;
-} */
 
 
 
@@ -112,8 +109,9 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 40%;
-  left: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 
@@ -123,6 +121,8 @@ nav a:hover {
   opacity: 0.7;
 }
 
+
+
 .text-section p {
   color: #fff;
   font-size: 1.5vw;
@@ -130,8 +130,36 @@ nav a:hover {
 }
 
 
+@media only screen and (max-width: 1800px) {
+  .text-section h1 {
+    font-size: 6vw;
+  }
+
+  .text-section p {
+    font-size: 2.5vw;
+  }
+}
 
 
+@media only screen and (max-width: 1200px) {
+  .text-section h1 {
+    font-size: 6.5vw;
+  }
+
+  .text-section p {
+    font-size: 2.8vw;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .text-section h1 {
+    font-size: 10vw;
+  }
+
+  .text-section p {
+    font-size: 6vw;
+  }
+}
 
 
 /* About Section */
@@ -249,7 +277,7 @@ nav a:hover {
   }
 
   .right-content {
-    font-size: 2vh;
+    font-size: 2.4vh;
   }
 }
 
@@ -313,6 +341,11 @@ nav a:hover {
 
 @media only screen and (max-width: 550px) {
 
+  #about-me {
+    height: 178vh;
+    
+  }
+
   .about-container {
     width: 100vw;
     margin: 0 auto;
@@ -324,7 +357,7 @@ nav a:hover {
 
 
   .left-content img {
-    height: 23vh;
+    height: 20vh;
     margin-top: 5vh;
     border-radius: 50%;
     opacity: 0.9;
@@ -339,7 +372,11 @@ nav a:hover {
     width: 100%;
   }
 
-  .right-content .top-right-content{
+  .right-content {
+    height: 60vh;
+  }
+
+  .right-content .top-right-content, .bottom-right-content{
     font-size: 1.5vh;
   }
 }
@@ -459,11 +496,13 @@ table:hover {
   background-size: cover;
   background-position: center;
   position: relative;
+  opacity: 0.7;
 }
 
 
 .top-interest .first-box {
   background-image: url('../img/reading-books.jpg');
+  
 }
 
 .top-interest .center-box {
@@ -474,6 +513,10 @@ table:hover {
   background-image: url('../img/coding.jpg');
 }
 
+.top-interest > *:hover {
+  opacity: 1;
+  transition: 0.45s ease-in-out;
+}
 
 .interest-content p{
   color: #fff;
@@ -506,6 +549,7 @@ table:hover {
   background-size: cover;
   background-position: center;
   position: relative;
+  opacity: 0.7;
 }
 
 .bottom-interest .first-box {
@@ -518,6 +562,11 @@ table:hover {
 
 .bottom-interest .last-box {
   background-image: url('../img/playing-video-games.jpg');
+}
+
+.bottom-interest > *:hover {
+  opacity: 1;
+  transition: 0.45s ease-in-out;
 }
 
 
@@ -586,4 +635,16 @@ table:hover {
   font-size: 1.8vh;
   font-weight: lighter;
   opacity: 0.7;
+}
+
+@media only screen and (max-width: 2000px) {
+  #footer .footer-text-content {
+    font-size: 1.32vh;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  #footer .footer-text-content {
+    font-size: 1.1vh;
+  }
 }
