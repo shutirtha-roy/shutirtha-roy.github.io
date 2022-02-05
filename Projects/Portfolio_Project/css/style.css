@@ -602,6 +602,64 @@ table:hover {
 
 /* Interest */
 
+.modal {
+  display: none;
+  position: fixed;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.modal-content {
+  background-color: transparent;
+  margin: 15% auto;
+  width: 55%;
+  height: 50%;
+}
+
+
+
+@media only screen and (max-width: 1500px) {
+  .modal-content {
+    margin: 20% auto;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .modal-content {
+    margin: 25% auto;
+  }
+}
+
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
 #interest {
   background-image: url("../img/interest.jpg");
   height: 100vh;
@@ -639,16 +697,16 @@ table:hover {
 }
 
 
-.top-interest .first-box {
+.first-box {
   background-image: url('../img/reading-books.jpg');
   
 }
 
-.top-interest .center-box {
+.center-box {
   background-image: url('../img/watching-movies.jpg');
 }
 
-.top-interest .last-box {
+.last-box {
   background-image: url('../img/coding.jpg');
 }
 
@@ -668,11 +726,6 @@ table:hover {
 }
 
 
-
-
-
-
-
 .bottom-interest {
   display: flex;
   width: 100%;
@@ -682,7 +735,6 @@ table:hover {
 
 .bottom-interest > * {
   height: 35vh;
-  background-color: turquoise;
   width: 30%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -691,16 +743,27 @@ table:hover {
   opacity: 0.7;
 }
 
-.bottom-interest .first-box {
+.first-box-bottom {
   background-image: url('../img/listening-to-music.jpg');
 }
 
-.bottom-interest .center-box {
+.center-box-bottom {
   background-image: url('../img/travelling.jpg');
 }
 
-.bottom-interest .last-box {
+.last-box-bottom {
   background-image: url('../img/playing-video-games.jpg');
+}
+
+.image-property {
+  height: 45vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  opacity: 1;
+  color: white;
 }
 
 .bottom-interest > *:hover {

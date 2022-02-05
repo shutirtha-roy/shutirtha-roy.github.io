@@ -1,3 +1,5 @@
+//Header Section
+
 const headingChildren = document.querySelector(".text-section").children
 const firstChild = Array.from(headingChildren)[0];
 const lastChild = Array.from(headingChildren).at(-1);
@@ -53,21 +55,44 @@ const QuoteCreator = () => {
     setTimeout(headingAuthor, 3000);
 };
 
-
-if (window.innerWidth > 960) {
-    headerName();
-    QuoteCreator();
-} else {
-    const headingValue = "I'm Shutirtha Roy";
-    firstChild.innerHTML = headingValue;
-    headerCapitalize();
-
-    headingQuote();
-    headingAuthor();
-}
+headerName();
+QuoteCreator();
 
 
+//Interest Section
+const interestContainer = document.querySelector(".interest-content");
+const modal = document.getElementById("Modal");
+const closeTag = document.getElementsByClassName("close")[0];
+const addImage = document.querySelector(".add-image");
+let newElement = "";
+let newClassName = "";
 
+
+interestContainer.addEventListener("click", (e) => {
+    if(e.target.className.includes("box") == true){
+        modal.style.display = "block";
+        newElement = e.target.cloneNode(true);
+        newClassName = newElement.className;
+        newElement.classList.add("image-property");
+        addImage.className = newClassName + " image-property close";
+    }
+});
+
+closeTag.addEventListener("click", (e) => {
+    modal.style.display = "none";
+});
+
+document.addEventListener("click", (e) => {
+    console.log(e.target === modal);
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+});
+
+
+
+
+//Footer Section
 const pageLocation = window.location.href;
 const date = new Date(document.lastModified);
 const footer = document.querySelector(".footer-text-content");
@@ -77,5 +102,3 @@ const dateTag = footer.children[1];
 
 pageLocationTag.innerHTML += "<br>"+ pageLocation;
 dateTag.innerHTML += "<br>"+ date;
-
-
