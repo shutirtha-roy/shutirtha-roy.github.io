@@ -8,6 +8,9 @@
 
 :root {
   --link-color: #eceae7;
+  --white-color: #fff;
+  --dark-color: #000;
+  --dark-table-border-color: rgb(51, 44, 44);
 }
 
 body {
@@ -16,11 +19,12 @@ body {
 
 a {
   text-decoration: none;
+  
 }
 
-
-
-
+ul li {
+  list-style-type: none;
+}
 
 
 /* Header Section */
@@ -32,9 +36,6 @@ header {
   background-attachment: fixed;
   position: relative;
 }
-
-
-
 
 
 /* Navigation Section */
@@ -50,8 +51,8 @@ nav {
 nav a {
   color: var(--link-color);
   font-weight: bold;
-  font-size: 2.2vh;
-  opacity: 0.7;
+  font-size: 2.8vh;
+  opacity: 0.6;
 }
 
 nav a:hover {
@@ -119,8 +120,6 @@ ul .first-link {
 }
 
 
-
-
 .text-section {
   display: flex;
   flex-direction: column;
@@ -130,17 +129,14 @@ ul .first-link {
   transform: translate(-50%, -50%);
 }
 
-
 .text-section h1 {
-  color: #fff;
+  color: var(--white-color);
   font-size: 5vw;
   opacity: 0.7;
 }
 
-
-
 .text-section p {
-  color: #fff;
+  color: var(--white-color);
   font-size: 1.5vw;
   opacity: 0.7;
 }
@@ -181,9 +177,9 @@ ul .first-link {
 /* About Section */
 
 #about-me {
-  background-color: #000;
+  background-color: var(--dark-color);
   
-  color: #fff;
+  color: var(--white-color);
   height: 100vh;
 }
 
@@ -208,7 +204,7 @@ ul .first-link {
 .left-content {
   height: 72vh;
   width: 50%;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--white-color);
   margin: 1vh;
   text-align: center;
 }
@@ -227,7 +223,7 @@ ul .first-link {
 
 .text-left-content {
   margin-top: 3vh;
-  color: black;
+  color: var(--dark-color);
 }
 
 .text-left-content p {
@@ -241,10 +237,11 @@ ul .first-link {
 .right-content {
   height: 72vh;
   width: 50%;
-  background-color: rgb(255, 255, 255);
-  color: black;
+  background-color: var(--white-color);
+  color: var(--dark-color);
   margin: 1vh;
   font-size: 2.5vh;
+  text-align: center;
 }
 
 
@@ -271,14 +268,12 @@ ul .first-link {
 
 @media only screen and (max-width: 2150px) {
   .text-left-content p {
-    word-spacing: 0.75vh;
-    font-size: 2vh;
+    font-size: 2.4vh;
   }
 
   .left-content {
     height: 78vh;
     width: 92vw;
-    background-color: rgb(255, 255, 255);
     margin: 1vh;
     text-align: center;
   }
@@ -286,15 +281,21 @@ ul .first-link {
   .right-content {
     height: 78vh;
     width: 92vw;
-    background-color: rgb(255, 255, 255);
     margin: 1vh;
-    text-align: center;
   }
 
   .right-content {
-    font-size: 2.4vh;
+    font-size: 2.6vh;
   }
 }
+
+
+@media only screen and (max-width: 1800px) {
+  .text-left-content p {
+    font-size: 2.15vh;
+  }
+}
+
 
 @media only screen and (max-width: 1500px) {
   .left-content img {
@@ -306,12 +307,7 @@ ul .first-link {
 
 
   .text-left-content p {
-    word-spacing: 0.75vh;
-    font-size: 2.8vh;
-  }
-
-  .right-content .top-right-content, .bottom-right-content{
-    font-size: 3.0vh;
+    font-size: 3.4vh;
   }
 
   #about-me {
@@ -320,9 +316,6 @@ ul .first-link {
   }
 
   .about-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     flex-wrap: wrap;
     width: 92vw;
   }
@@ -330,17 +323,14 @@ ul .first-link {
   .left-content {
     height: 85vh;
     width: 92vw;
-    background-color: rgb(255, 255, 255);
     margin: 1vh;
-    text-align: center;
   }
 
   .right-content {
     height: 85vh;
     width: 92vw;
-    background-color: rgb(255, 255, 255);
     margin: 1vh;
-    text-align: center;
+    font-size: 3.5vh;
   }
 
 }
@@ -348,55 +338,56 @@ ul .first-link {
 @media only screen and (max-width: 1000px) {
 
   .text-left-content p {
-    word-spacing: 0.75vh;
-    font-size: 2.5vh;
-  }
-
-
-  #about-me {
-    background-color: #000;
-    
-    color: #fff;
-    height: 200vh;
-    
+    font-size: 3.0vh;
   }
 
   .about-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
     width: 92vw;
   }
 
   .left-content {
     height: 85vh;
     width: 92vw;
-    background-color: rgb(255, 255, 255);
     margin: 1vh;
-    text-align: center;
   }
 
   .right-content {
     height: 85vh;
     width: 92vw;
-    background-color: rgb(255, 255, 255);
     margin: 1vh;
-    text-align: center;
+    font-size: 3.2vh;
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 820px) {
   .left-content img {
     height: 30vh;
     margin-top: 5vh;
     border-radius: 50%;
-    opacity: 0.9;
   }
 
   .text-left-content p {
-    word-spacing: 0.75vh;
-    font-size: 2.1vh;
+    font-size: 2.7vh;
+  }
+
+  .right-content {
+    font-size: 2.9vh;
+  }
+}
+
+@media only screen and (max-width: 625px) {
+  .left-content img {
+    height: 30vh;
+    margin-top: 5vh;
+    border-radius: 50%;
+  }
+
+  .text-left-content p {
+    font-size: 2.5vh;
+  }
+
+  .right-content {
+    font-size: 2.7vh;
   }
 }
 
@@ -416,17 +407,13 @@ ul .first-link {
     margin: 0 auto;
   }
 
-
   .left-content img {
     height: 20vh;
     margin-top: 5vh;
-    border-radius: 50%;
-    opacity: 0.9;
   }
 
   .text-left-content p {
-    word-spacing: 0.75vh;
-    font-size: 2vh;
+    font-size: 2.5vh;
   }
 
   .left-content {
@@ -435,10 +422,7 @@ ul .first-link {
 
   .right-content {
     height: 60vh;
-  }
-
-  .right-content .top-right-content, .bottom-right-content{
-    font-size: 1.5vh;
+    font-size: 1.8vh;
   }
 }
 
@@ -451,16 +435,14 @@ ul .first-link {
   .left-content img {
     height: 15vh;
     margin-top: 4vh;
-    border-radius: 50%;
-    opacity: 0.9;
   }
 
   .text-left-content p {
-    word-spacing: 0.75vh;
-    font-size: 1.6vh;
+    font-size: 1.8vh;
   }
 
-  .right-content .top-right-content, .bottom-right-content{
+  .right-content{
+    height: 40vh;
     font-size: 1.2vh;
     font-weight: bold;
     letter-spacing: -0.1vh;
@@ -474,9 +456,6 @@ ul .first-link {
     height: 60vh;
   }
 
-  .right-content {
-    height: 40vh;
-  }
   
 }
 
@@ -486,12 +465,17 @@ ul .first-link {
     height: 155vh;
   }
 
+  .text-left-content p {
+    font-size: 1.9vh;
+  }
+
   .left-content {
     height: 70vh;
   }
 
   .right-content {
     height: 50vh;
+    font-size: 1.6vh;
   }
   
 }
@@ -511,12 +495,12 @@ ul .first-link {
 }
 
 table, th, td {
-  border: 3px solid rgb(51, 44, 44);
+  border: 3px solid var(--dark-table-border-color);
   border-collapse: collapse;
 }
 
 table {
-  background-color: rgb(0, 0, 0);
+  background-color: var(--dark-color);
   opacity: 0.7;
 }
 
@@ -525,7 +509,7 @@ th, td {
   text-align: center;  
   font-size: 3vh;  
   font-weight: bold;
-  color: white;
+  color: var(--white-color);
 }
 
 table:hover {
@@ -537,8 +521,7 @@ table:hover {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  /* background-color: #ffffff; */
-  color: white;
+  color: var(--white-color);
 }
 
 #skill h1 {
@@ -582,8 +565,6 @@ table:hover {
 }
 
 @media only screen and (max-width: 400px) {
-
-
   #skill h1 {
     padding: 5vh;
     font-size: 6vh;
@@ -591,7 +572,6 @@ table:hover {
     font-weight: bold;
     color: rgb(238, 223, 223);
   }
-
 
   th, td {
     padding: 0.65vh;
@@ -601,7 +581,6 @@ table:hover {
 
 
 /* Interest */
-
 .modal {
   display: none;
   position: fixed;
@@ -616,49 +595,20 @@ table:hover {
 
 .modal-content {
   background-color: transparent;
-  margin: 15% auto;
+  position: relative;
+  top: 25%;
+  left: 25%;
   width: 55%;
   height: 50%;
 }
 
-
-
-@media only screen and (max-width: 1500px) {
-  .modal-content {
-    margin: 20% auto;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  .modal-content {
-    margin: 25% auto;
-  }
-}
-
-
-/* The Close Button */
 .close {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
   cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
 
 #interest {
   background-image: url("../img/interest.jpg");
@@ -670,7 +620,6 @@ table:hover {
   width: 100%;
   text-align: center;
 }
-
 
 #interest h1 {
   color: rgb(221, 213, 213);
@@ -695,7 +644,6 @@ table:hover {
   position: relative;
   opacity: 0.7;
 }
-
 
 .first-box {
   background-image: url('../img/reading-books.jpg');
@@ -724,7 +672,6 @@ table:hover {
   font-size: 3vh;
   font-weight: bold;
 }
-
 
 .bottom-interest {
   display: flex;
@@ -780,13 +727,10 @@ table:hover {
   .top-interest {
     display: flex;
     width: 90%;
-    
     justify-content: space-around;
     margin: 3vh auto;
-    /* height: 150vh; */
     flex-wrap: wrap;
   }
-
 
   .top-interest > * {
     width: 92vw;
@@ -796,10 +740,8 @@ table:hover {
   .bottom-interest {
     display: flex;
     width: 90%;
-    
     justify-content: space-around;
     margin: 3vh auto;
-    /* height: 150vh; */
     flex-wrap: wrap;
   }
   
@@ -807,9 +749,7 @@ table:hover {
     width: 92vw;
     margin: 3vh 0;
   }
-
 }
-
 
 @media only screen and (max-width: 400px) {
   #interest h1 {
@@ -818,13 +758,6 @@ table:hover {
     font-size: 4vh;
   }
 }
-
-
-
-
-
-
-
 
 
 /* Footer Section */
@@ -840,68 +773,61 @@ table:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1.8vh;
+  font-size: 2.0vh;
   font-weight: lighter;
   opacity: 0.7;
 }
 
 @media only screen and (max-width: 2000px) {
   #footer .footer-text-content {
-    font-size: 1.32vh;
+    font-size: 1.72vh;
   }
 }
 
 @media only screen and (max-width: 1500px) {
   #footer .footer-text-content {
-    font-size: 1.1vh;
-  }
-}
-
-
-@media only screen and (max-width: 1500px) {
-  #footer .footer-text-content {
-    font-size: 1.1vh;
+    font-size: 1.5vh;
   }
 }
 
 @media only screen and (max-width: 1100px) {
   #footer .footer-text-content {
-    font-size: 0.8vh;
+    font-size: 1.2vh;
     font-weight: bold;
   }
 }
 
 @media only screen and (max-width: 800px) {
   #footer .footer-text-content {
-    font-size: 0.6vh;
+    font-size: 1.0vh;
     font-weight: bold;
   }
 }
 
 @media only screen and (max-width: 650px) {
   #footer .footer-text-content {
-    font-size: 0.5vh;
+    font-size: 0.9vh;
     font-weight: bold;
   }
 }
 
 @media only screen and (max-width: 520px) {
   #footer .footer-text-content {
-    font-size: 0.4vh;
+    font-size: 0.8vh;
     font-weight: bold;
   }
 }
 
 @media only screen and (max-width: 400px) {
   #footer .footer-text-content {
-    font-size: 0.35vh;
+    font-size: 0.75vh;
     font-weight: bold;
   }
 }
 
 @media only screen and (max-width: 350px) {
   #footer .footer-text-content {
-    font-size: 0.3vh;
+    font-size: 0.7vh;
     font-weight: bold;
   }
 }

@@ -1,5 +1,5 @@
 //Header Section
-
+const wholeHeading = document.querySelector("header");
 const headingChildren = document.querySelector(".text-section").children
 const firstChild = Array.from(headingChildren)[0];
 const lastChild = Array.from(headingChildren).at(-1);
@@ -24,16 +24,18 @@ const sleep = (time) => {
 };
 
 
-const headerCapitalize = () => {
+const headerFormatChanger = () => {
     firstChild.innerHTML = firstChild.innerHTML.italics();
-    firstChild.style.color = "#6b6d4e";
+    if(screen.width >= 600) {
+        firstChild.style.color = "#6b6d4e";
+    }
+    
 };
 
 
 const characterAdder = () => {
     firstChild.innerHTML = stringAdder;
     console.log(firstChild.innerHTML);
-    //console.log(character);
 }
 
 
@@ -49,13 +51,23 @@ const headingAuthor = () => {
 
 
 const QuoteCreator = () => {
-    setTimeout(headerCapitalize, 2000);
+    setTimeout(headerFormatChanger, 2000);
     setTimeout(headingQuote, 2500);
     setTimeout(headingAuthor, 3000);
 };
 
 headerName();
 QuoteCreator();
+
+
+
+
+//Mobile Background View
+if(screen.width < 600) {
+    wholeHeading.style.backgroundImage = "linear-gradient(to right top, #242f41, #33475e, #40607c, #4d7b9a, #5897b9)";
+}
+
+
 
 
 //Interest Section
