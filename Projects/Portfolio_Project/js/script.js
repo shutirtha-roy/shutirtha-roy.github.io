@@ -13,7 +13,6 @@ const headerName = async () => {
     for (let character of headingValue) {
         stringAdder += character;
         await sleep(100);
-        //setInterval(characterAdder, 1000);
         firstChild.innerHTML = stringAdder;
     } 
     firstChild.innerHTML = headingValue;
@@ -22,7 +21,7 @@ const headerName = async () => {
 
 const sleep = (time) => {
     return new Promise((resolve) => setTimeout(resolve, time))
-}
+};
 
 
 const headerCapitalize = () => {
@@ -83,6 +82,7 @@ closeTag.addEventListener("click", (e) => {
 });
 
 document.addEventListener("click", (e) => {
+    console.log(e.target);
     console.log(e.target === modal);
     if (e.target === modal) {
         modal.style.display = "none";
