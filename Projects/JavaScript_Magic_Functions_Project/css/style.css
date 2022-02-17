@@ -14,6 +14,7 @@
   --border-color: rgb(211, 217, 223);
   --green: rgb(37, 168, 37);
   --light-orange: rgb(251, 198, 100);
+  --light-blue: rgb(104, 172, 199);
   --dark-orange: rgb(202, 113, 12);
 }
 
@@ -61,6 +62,8 @@ section {
   width: 20%;
   background-color: var(--dark-color);
   text-align: center;
+  position: fixed;
+  z-index: 1;
 }
 
 .left-sidebar ul{
@@ -90,34 +93,34 @@ section {
 .right-sidebar {
   height: 100vh;
   width: 80%;
+  padding-left: 40vw;
   background-color: var(--header-text-color);
 }
 
 
 /******************QUOTE BOX******************/
-
-#quote-box{
-  position: relative;
+#quote-box {
+  height: 100vh;
 }
-
 
 .quote-box-content {
   display: flex;
-  height: 30vh;
-  position: absolute;
+  height: 60vh;
   text-align: center;
   align-items: center;
+  justify-content: center;
   margin: 0 auto;
   top: 30vh;
   left: 40vh;
 }
 
 
-.quote-box-content .text-box{
+.quote-box-content #text-box{
   height: 5vh;
+  margin-bottom: 3vh;
 }
 
-.quote-box-content .text-box p{
+.quote-box-content #text-box p{
   font-size: 2.3vh;
   font-weight: bold;
   padding: 10px;
@@ -174,9 +177,52 @@ section {
 }
 
 #light-blue {
-  background-color: blue;
+  background-color: var(--light-blue);
 }
 
 #dark-orange {
   background-color: var(--dark-orange);
+}
+
+
+
+
+
+/******************HERO CONVERTER******************/
+#hero-converter {
+  height: 90vh;
+}
+
+
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1vh solid black;
+  height: 12vh;
+  margin-top: 20vh;
+  width: 50vw;
+}
+
+.hero-container > * {
+  margin: 0 1vh;
+  font-size: 3vh;
+}
+
+.input-container {
+  height: 5vh;
+  width: 15vw;
+  font-size: 2.5vh;
+}
+
+select{
+  height: 5vh;
+  width: 12vh;
+  font-size: 2.5vh;
+}
+
+button {
+  height: 5vh;
+  width: 5vh;
+  font-size: 2.5vh;
 }
