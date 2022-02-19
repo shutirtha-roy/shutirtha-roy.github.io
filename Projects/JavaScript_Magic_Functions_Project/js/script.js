@@ -173,3 +173,110 @@ inputNumber.addEventListener("keyup", (e) => {
 
 
 //Magic
+const magicContainer = document.querySelector(".magic-container");
+const maginInput = document.querySelector("#magic-input");
+
+const clearButton = document.getElementById("clear");
+const capitalizeButton = document.getElementById("capitalize");
+const sortButton = document.getElementById("sort");
+const reverseButton = document.getElementById("reverse");
+const stripBlankButton = document.getElementById("strip-blank");
+const addNumberButton = document.getElementById("add-numbers");
+const shuffleButton = document.getElementById("shuffle");
+
+let sentenceLineSplit = maginInput.value.split("\n");
+maginInput.value = "";
+
+
+clearButton.addEventListener("click", (e) => {
+    maginInput.value = "";
+});
+
+capitalizeButton.addEventListener("click", (e) => {
+    maginInput.value = maginInput.value.toUpperCase();
+});
+
+sortButton.addEventListener("click", (e) => {
+    sentenceLineSplit = maginInput.value.split("\n");
+
+    if (maginInput.value != ""){
+        maginInput.value = sentenceLineSplit.sort().join("\n");
+    }
+});
+
+reverseButton.addEventListener("click", (e) => {
+    sentenceLineSplit = maginInput.value.split("\n");
+
+    if (maginInput.value != ""){
+        maginInput.value = sentenceLineSplit.reverse().join("\n");
+    }
+});
+
+stripBlankButton.addEventListener("click", (e) => {
+    let newSenceMaker = "";
+    sentenceLineSplit = maginInput.value.split("\n");
+
+    for(let i = 0; i < sentenceLineSplit.length; i++){
+
+        if(sentenceLineSplit[i] != "") {
+            newSenceMaker += sentenceLineSplit[i].trim() + "\n";
+        }
+    }
+
+    maginInput.value = newSenceMaker;
+});
+
+
+addNumberButton.addEventListener("click", (e) => {
+
+    let newSenceMaker = "";
+    sentenceLineSplit = maginInput.value.split("\n");
+
+    for(let i = 0; i < sentenceLineSplit.length; i++){
+
+        if(i != sentenceLineSplit.length - 1)
+        {
+            newSenceMaker += `${i+1}. ${sentenceLineSplit[i]}\n`;
+        }
+        else {
+            newSenceMaker += `${i+1}. ${sentenceLineSplit[i]}`;
+        }
+    }
+
+    maginInput.value = newSenceMaker;
+});
+
+
+shuffleButton.addEventListener("click", (e) => {
+    
+    let newSenceMaker = "";
+    sentenceLineSplit = maginInput.value.split("\n");
+    
+
+    let temp = sentenceLineSplit[0];
+    sentenceLineSplit[0] = sentenceLineSplit[sentenceLineSplit.length - 1];
+
+    sentenceLineSplit[sentenceLineSplit.length - 1] = temp;
+
+    let newTemp = 0;
+    if(sentenceLineSplit.length > 3)
+    {
+        for(let i = 2; i < sentenceLineSplit.length - 1; i++) {
+            newTemp = sentenceLineSplit[i];
+            sentenceLineSplit[i] =  sentenceLineSplit[i + 1];
+            sentenceLineSplit[i + 1] = newTemp;
+        }
+
+        temp = sentenceLineSplit[2];
+        sentenceLineSplit[2] = sentenceLineSplit[sentenceLineSplit.length - 1];
+
+        sentenceLineSplit[sentenceLineSplit.length - 1] = temp;
+
+        let newTempV2 = sentenceLineSplit[1];
+        sentenceLineSplit[1] = sentenceLineSplit[sentenceLineSplit.length - 2];
+        sentenceLineSplit[sentenceLineSplit.length - 2] = newTempV2;
+    }
+    
+    maginInput.value = sentenceLineSplit.join("\n");
+
+});

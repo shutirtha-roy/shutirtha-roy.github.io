@@ -253,4 +253,28 @@ button {
 /***************** MAGIC *****************/
 #magic {
   height: 100vh;
+  width: 100%;
+  position:relative;
+}
+
+#magic-input {
+  font-size: 2vh;
+}
+
+.magic-container {
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  padding: 1vh;
+}
+
+.magic-container #magic-input {
+  width: 100%;
+  height: 25vh;
+}
+
+.btn-container button {
+  width: 13.5%;
+  font-size: 1.5vh;
+  
 }
