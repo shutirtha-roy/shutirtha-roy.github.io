@@ -38,8 +38,6 @@ header{
   padding: 1vh;
   background-color: var(--header-background-color);
   color: var(--header-text-color);
-  position: sticky;
-  top: 0;
 }
 
 
@@ -58,12 +56,13 @@ section {
 /*******************LEFT SIDEBAR*******************/
 
 .left-sidebar {
-  height: 100vh;
+  height: 120vh;
   width: 20%;
   background-color: var(--dark-color);
   text-align: center;
   position: fixed;
   z-index: 1;
+  top: -1%;
 }
 
 .left-sidebar ul{
@@ -190,7 +189,7 @@ section {
 
 /******************HERO CONVERTER******************/
 #hero-converter {
-  height: 90vh;
+  height: 100vh;
 }
 
 
@@ -225,4 +224,33 @@ button {
   height: 5vh;
   width: 5vh;
   font-size: 2.5vh;
+}
+
+
+
+
+
+/******************Max, Min, Sum, Average and Reverse Order******************/
+#multiple-operation-numbers {
+  height: 100vh;
+  position:relative;
+}
+
+
+.form-number {
+  position: absolute;
+  top: 30%;
+  font-size: 3vh;
+}
+
+
+.form-number input{
+  font-size: 3vh;
+  margin: 2vh;
+}
+
+
+/***************** MAGIC *****************/
+#magic {
+  height: 100vh;
 }

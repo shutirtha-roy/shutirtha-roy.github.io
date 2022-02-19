@@ -1,4 +1,4 @@
-//QUOTE BOX
+//Quote Box
 const colorBoxes = document.querySelector(".all-color-boxes");
 const textBox = document.getElementById('text-content');
 const quoteTextContent = document.querySelector(".quote-text-content");
@@ -109,3 +109,67 @@ submitGoButton.addEventListener("click", (e) => {
 });
 
 
+
+
+//Max, Min, Sum, Average and Reverse Order
+const inputNumber = document.getElementById("input-number");
+const maxVariable = document.getElementById("max");
+const minVariable = document.getElementById("min");
+const sumVariable = document.getElementById("sum");
+const averageVariable = document.getElementById("average");
+const reverseOrderVariable = document.getElementById("reverse-order");
+
+
+let stringSplitter = (numbers) => {
+    const getValue = numbers.includes(",") ? numbers.split(",") : numbers.split(" ");
+
+    for(let i = 0; i < getValue.length; i++)
+    {
+        getValue[i] = parseInt(getValue[i]);
+    }
+
+    return getValue;
+}
+
+
+let getMaxValue = (numberValue) => {
+    return Math.max(...numberValue);
+};
+
+let getMinValue = (numberValue) => {
+    return Math.min(...numberValue);
+};
+
+let getSummationValue = (numberValue) => {
+    return numberValue.reduce((x, y) => x + y, 0);
+};
+
+let getAverageValue = (numberValue) => {
+    return getSummationValue(numberValue) / numberValue.length;
+}
+
+let getReverseValue = (numberValue) => {
+    return numberValue.reverse();
+}
+
+inputNumber.addEventListener("keyup", (e) => {
+    const numberValue = stringSplitter(e.target.value);
+    if(!(e.target.value.endsWith(",") || e.target.value.endsWith(" ")) || e.target.value == "") {
+        maxVariable.value = getMaxValue(numberValue);
+        minVariable.value = getMinValue(numberValue);
+        sumVariable.value = getSummationValue(numberValue);
+        averageVariable.value = getAverageValue(numberValue);
+        reverseOrderVariable.value = getReverseValue(numberValue);
+    }
+    if(e.target.value == "") {
+        maxVariable.value = "";
+        minVariable.value = "";
+        sumVariable.value = "";
+        averageVariable.value = "";
+        reverseOrderVariable.value = "";
+    }
+});
+
+
+
+//Magic
