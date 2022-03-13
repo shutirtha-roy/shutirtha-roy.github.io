@@ -92,7 +92,7 @@ function showValuesToUIInput(id) {
 function validateInput(name, price) {
     let isError = false;
 
-    if(!name || name.length < 5) {
+    if(!name || name.length < 3) {
         isError = true;
         //console.log("invalid input");
     }
