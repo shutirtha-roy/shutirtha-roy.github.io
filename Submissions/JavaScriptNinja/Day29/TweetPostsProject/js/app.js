@@ -7,5 +7,7 @@
 //generate time during adding tweet
 //date-fns
 
-console.log(format)
+
+
+console.log(dateFns.format(new Date(), "MM"));
 
