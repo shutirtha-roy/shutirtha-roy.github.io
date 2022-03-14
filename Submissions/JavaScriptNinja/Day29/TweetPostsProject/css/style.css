@@ -28,3 +28,10 @@ i {
     cursor: pointer;
     margin-left: 3vh;
 }
+
+
+/*****************CONTENT****************/
+.heading-text {
+    text-align: center;
+    padding: 1.8rem;
+}
