@@ -15,20 +15,30 @@ const showPost = document.querySelector(".show-post");
 
 
 
-let generateTime = () => {
-    return dateFns;
+let generateTime = (time) => {
+    console.log(new Date());
+    console.log(time);
+
+
+    return dateFns.distanceInWords(
+        new Date(),
+        time,
+        { addSuffix: true }
+    );
 };
 
+/* dateFns.distanceInWords(
+    new Date(),
+    new Date(1986, 3, 4, 11, 32, 0),
+    { addSuffix: true }
+) */
+
 const posts = [
-    {
+    /* {
         id: 1,
         post: "Today is a bright day.",
-        time: dateFns.formatDistance(
-            new Date(1986, 3, 4, 11, 32, 0),
-            new Date(1986, 3, 4, 10, 32, 0),
-            { addSuffix: true }
-        )
-    }
+        time: new Date()
+    } */
 ];
 
 
@@ -50,7 +60,7 @@ let showAllPostsToUI = () => {
     posts.forEach((item) => {
         htmlPost += `<a href="#" class="list-group-item list-group-item-action">
         <p class="mb-1 post-content">${item.id}. ${item.post}</p>
-          <small class="float-right time-view">3 days ago</small>
+          <small class="float-right time-view">${generateTime(item.time)} ago</small>
       </a>`;
     });
 
@@ -67,11 +77,7 @@ let submitPostContent = (evt) => {
         let post = {
             id: posts.length + 1,
             post: inputPost.value,
-            time: dateFns.formatDistance(
-                new Date(1986, 3, 4, 11, 32, 0),
-                new Date(1986, 3, 4, 10, 32, 0),
-                { addSuffix: true }
-            )
+            time: new Date()
         }
 
         posts.push(post);
