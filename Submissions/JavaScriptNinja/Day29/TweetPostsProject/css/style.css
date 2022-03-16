@@ -35,3 +35,13 @@ i {
     text-align: center;
     padding: 1.8rem;
 }
+
+.submit-tweet {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.submit-tweet:hover {
+    opacity: 1;
+    transform: scale(1.02);
+}
