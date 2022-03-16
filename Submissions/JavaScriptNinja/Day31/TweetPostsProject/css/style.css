@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+    --game-message: rgb(170, 216, 238);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    
+}
+  
+li {
+    list-style-type: none;
+}
+
+
+i {
+    cursor: pointer;
+    margin-left: 3vh;
+}
+
+
+/*****************CONTENT****************/
+.heading-text {
+    text-align: center;
+    padding: 1.8rem;
+}
+
+/************LEFT CONTENT************/
+
+.submit-tweet {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.submit-tweet:hover {
+    opacity: 1;
+    transform: scale(1.02);
+}
