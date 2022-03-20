@@ -36,7 +36,7 @@ i:hover {
 
 .heading {
     font-size: 2.2rem;
-    width: 50%;
+    width: 55%;
     text-align: center;
 }
 
@@ -44,7 +44,7 @@ i:hover {
 
 /************FORM************/
 #input-form {
-    width: 50%;
-    font-size: 90%; 
+    width: 55%;
     text-align: center;
 }
+

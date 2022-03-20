@@ -18,47 +18,51 @@
 
         <form class="mx-auto" id="input-form">
 
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name"placeholder="Please enter your name">
-                <p id="alertName" class="text-danger font-weight-bold form-text" hidden></p>
-            </div>
-
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Please enter your username">
-                <p id="alertEmail" class="text-danger font-weight-bold form-text" hidden></p>
-            </div>
-
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Please enter your email">
-              <p id="alertEmail" class="text-danger font-weight-bold form-text" hidden></p>
-            </div>
-
-            <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Please enter your password">
-              <p id="alertPassword" class="text-danger font-weight-bold form-text" hidden></p>
-            </div>
-
-            <div class="form-group">
-                <label for="exampleInputPassword1">Confirm Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Please reenter your password">
-                <p id="alertPassword" class="text-danger font-weight-bold form-text" hidden></p>
+            <div id="form-input">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Please enter your name">
+                    <p id="alertName" class="text-danger font-weight-bold form-text"></p>
+                </div>
+    
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" placeholder="Please enter your username">
+                    <p id="alertUsername" class="text-danger font-weight-bold form-text"></p>
+                </div>
+    
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="email" placeholder="Please enter your email">
+                  <p id="alertEmail" class="text-danger font-weight-bold form-text"></p>
+                </div>
+    
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="password" placeholder="Please enter your password">
+                  <p id="alertPassword" class="text-danger font-weight-bold form-text"></p>
+                </div>
+    
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" placeholder="Please reenter your password">
+                    <p id="alertConfirmPassword" class="text-danger font-weight-bold form-text"></p>
+                </div>
+                
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary m-1" id="generatePassword" onclick="showGeneratedPassword();">Generate Password</button>
+                    <button type="button" class="btn btn-primary m-1" id="copyPassword" onclick="copyThePassword();">Copy Password</button>
+                    <p id="alertGeneratedPassword" class="text-danger font-weight-bold form-text"></p>
+                </div>
+    
+                <div class="form-group">
+                    <label for="name">Profile Link</label>
+                    <input type="text" class="form-control" id="profileLink" placeholder="Enter your facebook profile link">
+                    <p id="alertProfileLink" class="text-danger font-weight-bold form-text"></p>
+                </div>
             </div>
             
-            <button type="submit" class="btn btn-primary m-1">Generate Password</button>
-            <button type="submit" class="btn btn-primary m-1">Copy Password</button>
-
-            <div class="form-group">
-                <label for="name">Profile Link</label>
-                <input type="text" class="form-control" id="name"placeholder="Enter name">
-                <p id="alertName" class="text-danger font-weight-bold form-text" hidden></p>
-            </div>
-
-
-            <input type="submit" class="btn btn-primary" value="Value"></input>
+            <input type="submit" class="btn btn-primary" value="Submit"></input>
             
         </form>
     </div>
