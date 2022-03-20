@@ -31,7 +31,7 @@ let profileValue = "";
 
 //Regex Pattern
 const namePattern = /^[a-zA-Z]+$/;
-const userNamePattern = /^[a-zA-Z0-9]{5}.$/;
+const userNamePattern = /^[a-zA-Z0-9]{5}$/;
 const emailPatten = /\S+@\S+\.\S+/;
 const phonePattern =  /(^(\+8801|8801|01|008801))[1|3-9]{1}(\d){8}$/;
 const passwordPattern = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
