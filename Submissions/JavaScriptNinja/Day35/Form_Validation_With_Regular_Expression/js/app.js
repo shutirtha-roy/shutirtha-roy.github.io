@@ -8,6 +8,7 @@ const copyPassword = document.querySelector("#copyPassword");
 const profileLink = document.querySelector("#profileLink");
 const formInput = document.querySelector("#form-input");
 const submitForm = document.querySelector("#input-form");
+const submitBtn = document.querySelector("#submit-btn");
 
 
 
@@ -20,17 +21,17 @@ const alertConfirmPassword = document.querySelector("#alertConfirmPassword");
 const alertProfileLink = document.querySelector("#alertProfileLink");
 
 
-let nameValue;
-let usernameValue;
-let emailValue;
-let passwordValue;
-let confirmPasswordValue;
-let profileValue;
+let nameValue = "";
+let usernameValue = "";
+let emailValue = "";
+let passwordValue = "";
+let confirmPasswordValue = "";
+let profileValue = "";
 
 
 //Regex Pattern
 const namePattern = /^[a-zA-Z]+$/;
-const userNamePattern = /[a-zA-Z0-9]{5}/;
+const userNamePattern = /^[a-zA-Z0-9]{5}.$/;
 const emailPatten = /\S+@\S+\.\S+/;
 const phonePattern =  /(^(\+8801|8801|01|008801))[1|3-9]{1}(\d){8}$/;
 const passwordPattern = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
@@ -124,8 +125,15 @@ let getGeneratedPassword = () => {
     return Array(25).fill("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()~").map(function(x) { return x[Math.floor(Math.random() * x.length)] }).join('');
 }
 
-let checkIfInputNotEmpty = () => {
-
+let checkIfInputNotEmpty = (values) => {
+    values.forEach(item => {
+        
+        if(item === "") {
+            return false;
+        } else {
+            return true;
+        }
+    });
 }
 
 let checkAllValidation = (nameValue, usernameValue, emailValue, passwordValue, confirmPasswordValue, profileValue) => {
@@ -161,7 +169,10 @@ formInput.addEventListener("keyup", (event) => {
 submitForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    checkIfInputNotEmpty([nameValue, usernameValue, emailValue, passwordValue, confirmPasswordValue, profileValue]);
-    console.log(nameValue);
+    let formCondition = checkIfInputNotEmpty([nameValue, usernameValue, emailValue, passwordValue, confirmPasswordValue, profileValue]);
+    console.log(formCondition)
+    if(formCondition === true) {
+        submitBtn.style.backgroundColor = "Green";
+    }
 })
 
