@@ -94,3 +94,26 @@ console.log(samim.fullName());
 //new String(), new Number(), new Array(), new Function()
 const str = new String('samim');
 console.log(str.length);
+
+
+
+//Prototype chain
+//base is akways prototype object
+//String(own) - String prototype-base object
+//Array(own) - Array prototype-base object
+//Number(own) - Number prototype-base object
+//Object(own) - base object
+
+
+//Accessing prototype
+
+
+//by created object (__proto__)
+//by contructor function (prototype)
+
+str.__proto__ = String.prototype; //true
+str.__proto__.__proto__ = Object.prototype; //true
+
+console.log(str.__proto__);
+console.log(str.__proto__.__proto__)
+console.log(String.prototype);
