@@ -75,7 +75,8 @@ console.log(profile('Koushik', 'Kumar', 25)); */
 
 
 //constructor function
-function Profile(firstName, lastName, age) {
+/* function Profile(firstName, lastName, age) {
+//default
 //this === {}
     this.fName = firstName;
     this.lName = lastName;
@@ -88,7 +89,7 @@ function Profile(firstName, lastName, age) {
 
 const samim = new Profile('samim', 'Hasan', 30);
 const koushik = new Profile('koushik', 'kumar', 26);
-console.log(samim.fullName());
+console.log(samim.fullName()); */
 
 
 //new String(), new Number(), new Array(), new Function()
@@ -117,3 +118,50 @@ str.__proto__.__proto__ = Object.prototype; //true
 console.log(str.__proto__);
 console.log(str.__proto__.__proto__)
 console.log(String.prototype);
+
+
+
+//Benefits of prototype
+//create single copy and access on demand
+function Profile(firstName, lastName, age) {
+    let _firstName = firstName;
+    let _age = age;
+    //default
+    //this === {}
+    this.lastName = lastName;
+    Object.defineProperties(this, {
+        firstName: {
+            get(){
+                return 'Mr' + _firstName;
+            },
+            set(name){
+                if(name === ''){
+                    throw new Error("Name can't be empty string");
+                }
+                _firstName = name;
+            },
+        age: {
+            get() {
+                return _age
+            },
+            set(age) {
+                if(age < 18) {
+                    throw new Error("Age must be greater than 18");
+                }
+                _age = age;
+            }
+        }
+        }
+    })
+    console.log(this);
+    //return this
+}
+
+Profile.prototype.fullName = function () {
+    return this.firstName + ' ' + this.lastName + ' ' + this.age;
+}
+
+
+const samim = new Profile('samim', 'Hasan', 30);
+//const koushik = new Profile('koushik', 'kumar', 26);
+console.log(samim.fullName());
