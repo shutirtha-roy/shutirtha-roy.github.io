@@ -222,23 +222,27 @@
 
 
 
-const CurrencyStore = {
-
-};
-
 const store = {
 
 };
 
 const UI = {
-    
+    onload() {
+        document.addEventListener("DOMContentLoaded", async (e) => {
+            e.preventDefault();
+            const objCountryList = await CurrencyStore.fetchAllcountries();
+            console.log(objCountryList.results)
+          });
+    }
 };
 
-let jsonValue;
+const CurrencyStore = {
+    async fetchAllcountries(){
+        const getResponse = await fetch(`https://free.currconv.com/api/v7/countries?&apiKey=e36bbd57844e9998eea7`)
+        return await getResponse.json()
+    },
+}
 
-fetch(`https://free.currconv.com/api/v7/currencies?apiKey&apiKey=e36bbd57844e9998eea7`)
-.then(response => response.text())
-.then(data => {
-    jsonValue = data;
-    //console.log(data)
-});
+
+
+UI.onload();
