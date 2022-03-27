@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-image: url(../images/1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  text-align: center;
+}
+
+
+/****************** HEADER *****************/
+header h1{
+  border: 5px solid green;
+  border-width: medium;
+  border-radius: 0 20px 20px 20px;
+  font-size: 60px;
+  margin-top: 200px;
+  color: lightgreen;
+}
+
+/****************SECTION*******************/
+.one button{
+  border: 5px solid black;
+  padding: 20px;
+  border-radius: 50px;
+  transform: 0.2s;
+  margin-top: 50px;
+  background-color: green;
+}
+
+.one a{
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.one button:hover{
+  background-color: black;
+  border: 3px solid green;
+}
+
+.one a:hover{
+  color: white;
+}
