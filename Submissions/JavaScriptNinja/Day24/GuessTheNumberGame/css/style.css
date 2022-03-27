@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+    --game-message: rgb(170, 216, 238);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    
+}
+  
+li {
+    list-style-type: none;
+}
+
+
+/*********************HEADER************************/
+
+header {
+    height: 100vh;
+}
+
+.guess-number-input {
+    width: 20% !important; 
+}
+
+.game-condition {
+    color: var(--game-message)
+}
+

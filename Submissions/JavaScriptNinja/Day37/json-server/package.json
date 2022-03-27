@@ -1,0 +1,14 @@
+{
+  "name": "json-server-practice",
+  "version": "1.0.0",
+  "description": "A fake Rest API built with JSON-SERVER",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch db.json"
+  },
+  "author": "roy",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
