@@ -1,3 +1,3 @@
 # shutirtha-roy.github.io
-HTML CSS JS Practice Project
+JavaScript Projects
 This section contains all my JavaScript Projects. Please Check the Projects Folder.
